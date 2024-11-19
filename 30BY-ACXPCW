@@ -1,0 +1,9 @@
+@echo off
+set DriverFolder=C:\YourDriverFolder
+
+for /r "%DriverFolder%" %%i in (*.inf) do (
+    pnputil /add-driver "%%i" /install
+)
+
+echo 驱动安装完成！
+pause
